@@ -1,0 +1,10 @@
+#ignores temp files
+#ignores temp folder
+
+###temp###
+
+*.tmp	
+temp/
+*tmp
+
+#end of list
