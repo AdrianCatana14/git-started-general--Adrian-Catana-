@@ -11,8 +11,10 @@ try:
         print("You are so young! life is ahead of you!")
     elif number >= 18 and number < 40:
         print("That's a nice age!")
-    else:
+    elif number >= 40:
         print("You must be very wise!")
+    else:
+        print("Value must be greater than 0")
 
 except ValueError:
     print("That doesn't seem to be an integer.")
