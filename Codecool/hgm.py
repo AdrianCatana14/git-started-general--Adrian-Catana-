@@ -26,38 +26,42 @@ while True:
         print('Please, write your name!')
         
 
+
+# 1. fac rost de un cuvant pe care sa il ghicesc
+the_dictionary = {}
+the_file = open("Codecool\countries_and_capitals.txt")
+for line in the_file:
+    key, value = line.rstrip("\n").split(" | ")
+    the_dictionary[key] = value
+
+    list_of_countries = list(the_dictionary.keys())
+    list_of_capitals = list(the_dictionary.values())
+    list_of_countries.sort()
+    list_of_capitals.sort()
+list_of_words = []
+
+difficulty = True
 while True:
     print("1. Easy 2. Medium 3. Hard 4. Quit ")
     difficulty = input("Select your difficulty: ")
-    lives = 7
     if difficulty == '1':
         lives = 7
-        print("You have 7 lives")
+        difficulty = False
+        list_of_words = list_of_countries
         break
     elif difficulty == '2':
         lives = 5
-        print("You have 5 lives")
+        difficulty = False
+        list_of_words = list_of_capitals
         break
     elif difficulty == '3':
         lives = 3
-        print("You have 3 lives")
+        difficulty = False
+        list_of_words = list_of_countries + list_of_capitals
         break
     else:
         print("Bye-bye")
         break
-
-
-# 1. fac rost de un cuvant pe care sa il ghicesc
-word_to_guess = 'Cairo'
-word_completion = "_" * len(word_to_guess)
-print(word_completion)
-
-guess_the_letter = input("Guess a letter: ")
-if guess_the_letter == 'Quit':
-    sys.exit('Bye-bye!')
-
-
-
 
 
 
