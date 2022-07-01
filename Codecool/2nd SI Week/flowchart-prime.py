@@ -1,23 +1,23 @@
 # Implement flowchart "Prime" here.
 print ("Start")
-i = 2
 while True:
     try:
         n = int(input("Give me a number n (greater than 1): "))
-        break;
+        break
     except ValueError:
         print("Not an integer")
 
 if n < 2:
     print("Too small")
     print("Stop")
-elif n > i and n % i == 0:
-    print("Not prime")
-    print("Stop")
-elif n > i and not n % i == 0:
-    i = i + 1
-    print("Prime")
-    print("Stop")
+i  = 2
+while i < n:
+    if n % i == 0:
+        print("Not prime")
+        break
+    else:
+        i = i + 1
+print('Prime')
 
 
 

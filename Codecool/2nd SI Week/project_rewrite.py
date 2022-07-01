@@ -10,7 +10,7 @@ y = input("second number: ")
 def min(x, y):
     if x > y:
         return y
-    elif x < y:
+    else:
         return x
 print(min(x, y))
 
@@ -20,7 +20,7 @@ def max(values_list):
     for number in values_list:
         if number > highest_number:
             highest_number = number
-            return highest_number
+    return highest_number
 print(max(values_list))
 
 
